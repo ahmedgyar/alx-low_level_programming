@@ -1,4 +1,4 @@
-i#include <stdio.h>
+#include <stdio.h>
 
 /**
  * main - print out the numbers from 0 to 9 with commas and spaces
