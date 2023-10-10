@@ -1,22 +1,22 @@
+#include <stdio.h>
 #include "main.h"
-
 /**
- * main - check the code.
- *
- * Return: Always 0.
- *
- *
+ * print_alphabet_x10 - prints the english alphabet from a-z
+ * Return: 0
  */
 
 void print_alphabet_x10(void)
 {
-	for (int i = 0; i < 10; i++)
-	{
-	for (char ch = 'a'; ch <= 'z'; ch++)
-	{
-	printf("%c", ch);
-	}
-	printf("\n");
-	}
+	int x;
+	int y = 0;
 
+	for (; y < 10; y++)
+	{
+
+		for (x = 'a'; x <= 'z'; x++)
+		{
+			_putchar(x);
+		}
+		_putchar('\n');
+	}
 }

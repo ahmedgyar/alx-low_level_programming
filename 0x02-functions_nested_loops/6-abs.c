@@ -1,21 +1,16 @@
-#include "main.h"
 #include <stdio.h>
-
+#include "main.h"
 /**
- * main - check the code
- *
- * Return: Always 0.
+ * _abs - return absolute number of the input
+ * @num: Given number.
+ * Return: always 0 (success)
  */
 
-int _abs(int)
+int _abs(int num)
 {
-
-	if (n > 0)
+	if (num < 0)
 	{
-	n = (-1) * n
-		return (n);
+		num = num * -1;
 	}
-
-
+	return (num);
 }
-
