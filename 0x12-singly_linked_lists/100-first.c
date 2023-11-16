@@ -5,11 +5,22 @@
  *   main function is executed.
  */
 
-void __attribute__((constructor)) premain() {
-    printf("You're beat! and yet, you must allow,\nI bore my house upon my back!\n");
+
+
+size_t print_list(const list_t *h)
+{
+const list_t *cursor = h;
+size_t count = 0;
+
+while (cursor != NULL)
+{
+if (cursor->str != NULL)
+printf("[%d] %s\n", cursor->len, cursor->str);
+else
+printf("[0] (nil)\n");
+count += 1;
+cursor = cursor->next;
 }
 
-int main(void) {
-    // Your main function code here
-    return 0;
+return (count);
 }

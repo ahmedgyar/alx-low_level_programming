@@ -8,13 +8,15 @@
  */
 
 
-void free_list(list_t *head) {
-    list_t *tmp;
+void free_list(list_t *head)
+{
+	list_t *tmp;
 
-    while (head != NULL) {
-        tmp = head;
-        head = head->next;
-        free(tmp->str);
-        free(tmp);
-    }
+	while (head)
+	{
+		tmp = head->next;
+		free(head->str);
+		free(head);
+		head = tmp;
+	}
 }
