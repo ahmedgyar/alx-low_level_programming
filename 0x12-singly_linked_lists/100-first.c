@@ -1,26 +1,13 @@
 #include <stdio.h>
 
+void __attribute__((constructor)) pre_main(void);
+
 /**
- * hare - Prints a string before the
- *   main function is executed.
+ * pre_main - Function to be executed before main.
+ * It prints the specified message.
  */
-
-
-
-size_t print_list(const list_t *h)
+void pre_main(void)
 {
-const list_t *cursor = h;
-size_t count = 0;
-
-while (cursor != NULL)
-{
-if (cursor->str != NULL)
-printf("[%d] %s\n", cursor->len, cursor->str);
-else
-printf("[0] (nil)\n");
-count += 1;
-cursor = cursor->next;
-}
-
-return (count);
+printf("You're beat! and yet, you must allow,\n"
+"I bore my house upon my back!\n");
 }
